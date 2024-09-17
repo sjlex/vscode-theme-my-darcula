@@ -1,21 +1,21 @@
 {
-  "name": "vscode-theme-my-darcula",
-  "displayName": "vscode-theme-my-darcula",
-  "description": "My personal theme for Visual Studio Code, based on the Darcula theme from JetBrains IDEs.",
-  "version": "0.0.1",
-  "engines": {
-    "vscode": "^1.93.0"
-  },
-  "categories": [
-    "Themes"
-  ],
-  "contributes": {
-    "themes": [
-      {
-        "label": "My-Darcula",
-        "uiTheme": "vs-dark",
-        "path": "./themes/My-Darcula-color-theme.json"
-      }
-    ]
-  }
+	"name": "vscode-theme-my-darcula",
+	"displayName": "vscode-theme-my-darcula",
+	"description": "My personal theme for Visual Studio Code, based on the Darcula theme from JetBrains IDEs.",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.93.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "My-Darcula",
+				"uiTheme": "vs-dark",
+				"path": "./themes/My-Darcula-color-theme.json"
+			}
+		]
+	}
 }
