@@ -11,7 +11,10 @@ insert_final_newline = true
 
 [{*.bash,*.sh,*.zsh}]
 end_of_line = lf
-tab_width = 2
 
 [*.md]
 trim_trailing_whitespace = false
+
+[*.yml]
+indent_style = tab
+indent_size = 2

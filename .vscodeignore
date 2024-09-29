@@ -1,5 +1,28 @@
-.vscode/**
-.vscode-test/**
-.idea/**
-.gitignore
-.devcontainer/**
+**/bin
+
+**/Dockerfile*
+**/.dockerignore
+
+**/.git
+**/.gitignore
+**/.gitattributes
+
+**/.devcontainer
+**/.env
+
+.editorconfig
+.vscodeignore
+
+**/.idea
+**/.vscode
+**/.vscode-test/**
+**/npm-debug.log
+
+### Yarn 4
+.yarn
+.yarnrc.*
+.pnp.*
+
+### Taskfile
+./bin/task
+Taskfile.*
