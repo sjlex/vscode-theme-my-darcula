@@ -1,7 +1,7 @@
 version: "3"
 
 vars:
-  BUILD_PATH: "./dist/"
+  BUILD_PATH: "./dist"
 
   PACKAGE_NAME: "vscode-theme-my-darcula"
   PACKAGE_VERSION: "1.0.0"
