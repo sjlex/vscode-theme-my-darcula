@@ -75,28 +75,3 @@ tasks:
         -f {{.DEV_DOCKERFILE_PATH}}
         {{.ROOT_DIR}}
         {{.CLI_ARGS}}
-
-  # ----------------------------------------------------------------------------
-  # Lint
-  # ----------------------------------------------------------------------------
-
-  "lint":
-    desc: "Run linting"
-  #   deps:
-  #     - task: "lint:yamllint"
-
-  "lint:fix":
-    desc: "Run linting and write to files"
-    # cmds:
-    #   - task: "lint:ruff:fix"
-    #   - task: "lint:black:fix"
-
-  # "lint:yamllint":
-  #   desc: "Linting (yamllint)"
-  #   cmds:
-  #     - poetry run
-  #       yamllint
-  #         --config-file .yamllint.yml
-  #         --strict
-  #         {{.ROOT_DIR}}
-  #         {{.CLI_ARGS}}

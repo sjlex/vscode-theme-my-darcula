@@ -234,7 +234,7 @@
 		"walkThrough.embeddedEditorBackground": "#1A1A1A",
 		"welcomePage.progress.background": "#212121",
 		"welcomePage.tileBackground": "#141414",
-		"widget.shadow": "#00000080",
+		"widget.shadow": "#00000080"
 	},
 	"tokenColors": [
 		{
@@ -727,10 +727,7 @@
 		},
 		{
 			"name": "keyword.operator",
-			"scope": "keyword.operator.arithmetic,keyword.operator.comparison,keyword.operator.decrement,keyword.operator.increment,keyword.operator.relational",
-			"settings": {
-				//"foreground": "#8888C6"
-			}
+			"scope": "keyword.operator.arithmetic,keyword.operator.comparison,keyword.operator.decrement,keyword.operator.increment,keyword.operator.relational"
 		},
 		{
 			"name": "C operator assignment",
@@ -881,10 +878,7 @@
 		},
 		{
 			"name": "Variables",
-			"scope": "variable",
-			"settings": {
-				//"foreground": "#e06c75"
-			}
+			"scope": "variable"
 		},
 		{
 			"name": "Variables",
@@ -1314,7 +1308,7 @@
 		{
 			"name": "string.other.link.description.title.markdown",
 			"scope": [
-				"string.other.link.description.title.markdown",
+				"string.other.link.description.title.markdown"
 			],
 			"settings": {
 				"foreground": "#808080"
@@ -1809,29 +1803,20 @@
 			"name": "js operator.assignment",
 			"scope": [
 				"keyword.operator.assignment"
-			],
-			"settings": {
-				//"foreground": "#8888C6"
-			}
+			]
 		},
 		{
 			"name": "go operator",
 			"scope": [
 				"keyword.operator.assignment.go"
-			],
-			"settings": {
-				//"foreground": "#e5c07b"
-			}
+			]
 		},
 		{
 			"name": "go operator",
 			"scope": [
 				"keyword.operator.arithmetic.go",
 				"keyword.operator.address.go"
-			],
-			"settings": {
-				//"foreground": "#CC7832"
-			}
+			]
 		},
 		{
 			"name": "entity.name.type.go",
@@ -2343,11 +2328,11 @@
 		},
 		{
 			"name": "log.error",
-			"scope":[
+			"scope": [
 				"log.error"
 			],
 			"settings": {
-				"foreground": "#FF0000",
+				"foreground": "#FF0000"
 			}
 		},
 		{
@@ -2355,29 +2340,29 @@
 			"scope": [
 				"entity.name.function.macro.rust",
 				"entity.name.function.macro.rules.rust",
-				"meta.macro.rules.rust",
+				"meta.macro.rules.rust"
 			],
 			"settings": {
-				"foreground": "#4EADE5",
+				"foreground": "#4EADE5"
 			}
 		},
 		{
 			"name": "rust attributes",
 			"scope": [
 				"punctuation.definition.attribute.rust",
-				"meta.attribute.rust",
+				"meta.attribute.rust"
 			],
 			"settings": {
-				"foreground": "#BBB529",
+				"foreground": "#BBB529"
 			}
 		},
 		{
 			"name": "entity.name.type.rust",
 			"scope": [
-				"entity.name.type.rust",
+				"entity.name.type.rust"
 			],
 			"settings": {
-				"foreground": "#9876AA",
+				"foreground": "#9876AA"
 			}
 		},
 		{
@@ -2387,26 +2372,26 @@
 				"variable.other.metavariable.specifier.rust"
 			],
 			"settings": {
-				"foreground": "#4EADE5",
+				"foreground": "#4EADE5"
 			}
 		},
 		{
 			"name": "rust macro function declaration",
 			"scope": [
-				"variable.other.metavariable.name.rust",
+				"variable.other.metavariable.name.rust"
 			],
 			"settings": {
-				"foreground": "#ffc66d",
+				"foreground": "#ffc66d"
 			}
 		},
 		{
 			"name": "rust lifetime",
 			"scope": [
 				"entity.name.type.lifetime.rust",
-				"punctuation.definition.lifetime.rust",
+				"punctuation.definition.lifetime.rust"
 			],
 			"settings": {
-				"foreground": "#20999D",
+				"foreground": "#20999D"
 			}
 		},
 		{
@@ -2415,54 +2400,54 @@
 				"punctuation.semi.rust",
 				"punctuation.comma.rust",
 				"keyword.operator.question.rust",
-				"punctuation.definition.interpolation.rust",
+				"punctuation.definition.interpolation.rust"
 			],
 			"settings": {
-				"foreground": "#CC7832",
+				"foreground": "#CC7832"
 			}
 		},
 		{
 			"name": "rust meta.function.call.rust",
 			"scope": "meta.function.call.rust",
 			"settings": {
-				"foreground": "#9876AA",
+				"foreground": "#9876AA"
 			}
 		},
 		{
 			"name": "rust const variable",
 			"scope": [
-				"constant.other.caps.rust",
+				"constant.other.caps.rust"
 			],
 			"settings": {
-				"foreground": "#9876AA",
+				"foreground": "#9876AA"
 			}
 		},
 		{
 			"name": "rust result",
 			"scope": [
-				"entity.name.type.result.rust",
+				"entity.name.type.result.rust"
 			],
 			"settings": {
-				"foreground": "#9876AA",
+				"foreground": "#9876AA"
 			}
 		},
 		{
 			"name": "rust numeric types",
 			"scope": [
-				"entity.name.type.numeric.rust",
+				"entity.name.type.numeric.rust"
 			],
 			"settings": {
-				"foreground": "#CC7832",
+				"foreground": "#CC7832"
 			}
 		},
 		{
 			"name": "rust numbers",
 			"scope": [
 				"constant.numeric.decimal.rust",
-				"constant.numeric.float.rust",
+				"constant.numeric.float.rust"
 			],
 			"settings": {
-				"foreground": "#6897BB",
+				"foreground": "#6897BB"
 			}
 		},
 		{
@@ -2470,29 +2455,29 @@
 			"scope": [
 				"variable.other.readwrite.rust",
 				"variable.other.rust",
-				"keyword.operator.assignment.rust",
+				"keyword.operator.assignment.rust"
 			],
 			"settings": {
-				"foreground": "#abb2bf",
+				"foreground": "#abb2bf"
 			}
 		},
 		{
 			"name": "rust functions",
 			"scope": [
-				"entity.name.function.rust",
+				"entity.name.function.rust"
 			],
 			"settings": {
-				"foreground": "#ffc66d",
+				"foreground": "#ffc66d"
 			}
 		},
 		{
 			"name": "rust variables",
 			"scope": [
-				"variable.other.rust",
+				"variable.other.rust"
 			],
 			"settings": {
-				"foreground": "#abb2bf",
+				"foreground": "#abb2bf"
 			}
-		},
-	],
+		}
+	]
 }
