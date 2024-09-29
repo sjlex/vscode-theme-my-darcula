@@ -74,6 +74,9 @@ jspm_packages/
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
 
+.vscode/*
+!.vscode/launch.json
+
 ### Yarn 4
 .yarn/*
 !.yarn/patches
