@@ -5,5 +5,10 @@
 		"context": ".."
 	},
 	"postCreateCommand": "./bin/task dev:dependencies:install",
-	"remoteUser": "node"
+	"remoteUser": "node",
+	"customizations": {
+		"vscode": {
+			"extensions": ["task.vscode-task"]
+		}
+	}
 }

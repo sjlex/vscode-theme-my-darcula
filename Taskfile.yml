@@ -51,6 +51,7 @@ tasks:
         --allow-missing-repository
         -o {{.PACKAGE_PATH}}
 
+  # TODO
   "publish":
     desc: "Publish VSCode Extension"
 
