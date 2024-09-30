@@ -39,7 +39,7 @@ jobs:
           image: user/app:latest
           name: user-app
           args: |
-            pwd && ls -la . && ./bin/task && task --version
+            pwd && ls -la . && ./bin/task && ls -la /usr/bin && task --version
 
   #     - name: "Upload a Build Artifact"
   #       uses: "actions/upload-artifact@50769540e7f4bd5e21e526ee35c689e35e0d6874" #v4.4.0
