@@ -37,6 +37,7 @@ jobs:
         uses: addnab/docker-run-action@v3
         with:
           image: user/app:latest
+          options: -v ${{ github.workspace }}:/workspaces/vscode-theme-my-darcula
           run: |
             task pack && ls -la ./ && ls -la ./dist
 
