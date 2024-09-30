@@ -1,5 +1,29 @@
-.vscode/**
-.vscode-test/**
-.idea/**
-.gitignore
-vsc-extension-quickstart.md
+bin
+dist
+
+**/Dockerfile*
+**/.dockerignore
+
+**/.git
+**/.gitignore
+**/.gitattributes
+
+**/.devcontainer
+**/.env
+
+.editorconfig
+.vscodeignore
+
+**/.idea
+**/.vscode
+**/.vscode-test/**
+**/npm-debug.log
+
+### Yarn 4
+.yarn
+.yarnrc.*
+.pnp.*
+
+### Taskfile
+./bin/task
+Taskfile.*
