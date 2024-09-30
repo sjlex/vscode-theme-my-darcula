@@ -9,6 +9,9 @@ vars:
 
   WORKSPACE_DIR: "/workspaces/{{.PACKAGE_NAME}}"
 
+  DOCKER_IMAGE: "{{.PACKAGE_NAME}}:{{.PACKAGE_VERSION}}"
+  DOCKERFILE_PATH: "./Dockerfile"
+
   DEV_DOCKER_IMAGE: "{{.PACKAGE_NAME}}:{{.PACKAGE_VERSION}}-dev"
   DEV_DOCKERFILE_PATH: ".devcontainer/Dockerfile.dev"
 
@@ -59,8 +62,26 @@ tasks:
   # Docker
   # ----------------------------------------------------------------------------
 
-  "dev:docker:run":
+  "docker:run":
     desc: "Run docker container"
+    cmds:
+      - docker run -it --rm
+        -v {{.ROOT_DIR}}:{{.WORKSPACE_DIR}}
+        -w {{.WORKSPACE_DIR}}
+        {{.DOCKER_IMAGE}}
+        {{.CLI_ARGS}} || true
+
+  "docker:build":
+    desc: "Build docker image"
+    cmds:
+      - docker buildx build
+        -t {{.DOCKER_IMAGE}}
+        -f {{.DOCKERFILE_PATH}}
+        {{.ROOT_DIR}}
+        {{.CLI_ARGS}}
+
+  "dev:docker:run":
+    desc: "Run dev container"
     cmds:
       - docker run -it --rm
         -v {{.ROOT_DIR}}:{{.WORKSPACE_DIR}}
@@ -69,7 +90,7 @@ tasks:
         {{.CLI_ARGS}} || true
 
   "dev:docker:build":
-    desc: "Build docker image"
+    desc: "Build dev image"
     cmds:
       - docker buildx build
         -t {{.DEV_DOCKER_IMAGE}}
