@@ -38,7 +38,7 @@ jobs:
         with:
           image: user/app:latest
           run: |
-            task pack
+            task pack && ls -la ./ && ls -la ./dist
 
       - name: "Upload a Build Artifact"
         uses: "actions/upload-artifact@50769540e7f4bd5e21e526ee35c689e35e0d6874" #v4.4.0
@@ -61,6 +61,9 @@ jobs:
         with:
           name: "vscode-theme"
           path: "${{ env.PACKAGE_PATH }}"
+
+      - name: Foo
+        run: "ls -la ./ && ls -la ./dist"
 
       - name: "GH Release"
         uses: "softprops/action-gh-release@c062e08bd532815e2082a85e87e3ef29c3e6d191" # v2.0.8
