@@ -34,11 +34,11 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Run
-        uses: tj-actions/docker-run@v2
+        uses: addnab/docker-run-action@v3
         with:
-          image: user/app:latest
           name: user-app
-          args: |
+          image: user/app:latest
+          run: |
             pwd && ls -la . && ./bin/task && ls -la /usr/local/bin && task --version
 
   #     - name: "Upload a Build Artifact"
