@@ -53,5 +53,7 @@ jobs:
 
       - name: GH Release
         uses: softprops/action-gh-release@c062e08bd532815e2082a85e87e3ef29c3e6d191 # v2.0.8
+        permissions:
+          contents: write
         with:
           files: ${{ env.ARTIFACT_DIR }}${{ env.PACKAGE_PATH }}
