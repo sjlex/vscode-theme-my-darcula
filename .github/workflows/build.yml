@@ -55,6 +55,9 @@ jobs:
       - name: Foo
         run: pwd && ls -la . && ./bin/task
 
-      - name: Release
-        uses: softprops/action-gh-release@v2
-        if: startsWith(github.ref, 'refs/tags/')
+      - name: Docker
+        run: docker --version
+
+      # - name: Release
+      #   uses: softprops/action-gh-release@v2
+      #   if: startsWith(github.ref, 'refs/tags/')
