@@ -26,6 +26,6 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Foo
-        run: ./bin/task    
+        run: ls -la . && ./bin/task    
       
 
