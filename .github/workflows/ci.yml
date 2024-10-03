@@ -11,6 +11,9 @@ on:
 
 jobs:
   checkout:
+    runs-on: "ubuntu-22.04"
+    timeout-minutes: 5
+
     steps:
       - uses: ./.github/workflows/checkout.yml
       - name: Foo
