@@ -39,6 +39,7 @@ jobs:
           cache-to: "type=gha,mode=max"
 
   pack:
+    needs: build-env
     runs-on: "ubuntu-22.04"
     timeout-minutes: 5
     container:
