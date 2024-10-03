@@ -41,6 +41,7 @@ jobs:
           image: builder:latest
           options: -v ${{ github.workspace }}/dist:/workspaces/vscode-theme-my-darcula/dist
           run: |
+            chown -R node:node /workspaces/vscode-theme-my-darcula/dist &&
             task pack &&
             ls -la ./ &&
             ls -la ./dist
