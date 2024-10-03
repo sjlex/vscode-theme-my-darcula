@@ -44,7 +44,7 @@ jobs:
           -v ${{ github.workspace }}/dist:/workspaces/vscode-theme-my-darcula/dist \
           build-env:latest \
           sudo chown -R node:node ./dist && \
-          ls -la .
+          ls -la . && ls -la ./dist
 
       # - name: "Packaging extension"
       #   uses: "addnab/docker-run-action@4f65fabd2431ebc8d299f8e5a018d79a769ae185" # v3

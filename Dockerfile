@@ -46,7 +46,7 @@ USER root
 
 # Install taskfile
 RUN sh -c "$(curl --location https://taskfile.dev/install.sh)" -- \
-	-d v$TASKFILE_VERSION -b /usr/local/bin
+	-b /usr/local/bin -d v$TASKFILE_VERSION
 
 # Corepack
 RUN corepack enable
