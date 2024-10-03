@@ -45,7 +45,7 @@ jobs:
           -u node \
           build-env:latest \
           sudo chown -R node:node ./dist && \
-          task pack
+          ls -la /usr/local/bin
 
       - name: "Upload a Build Artifact"
         uses: "actions/upload-artifact@50769540e7f4bd5e21e526ee35c689e35e0d6874" #v4.4.0
