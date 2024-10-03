@@ -15,7 +15,7 @@ jobs:
     timeout-minutes: 5
 
     steps:
-      - uses: "${{ github.event.repository.name }}/.github/workflows/checkout.yml"
+      - uses: "${{ github.ref }}/.github/workflows/checkout.yml"
       - name: Foo
         run: "ls -la ./"
 
