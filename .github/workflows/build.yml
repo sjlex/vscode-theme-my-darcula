@@ -1,7 +1,7 @@
-# name: CI
+name: "Build"
 
-# on:
-#   workflow_dispatch:
+on:
+  workflow_dispatch:
 #   push:
 #     branches: [$default-branch]
 #     # tags:
