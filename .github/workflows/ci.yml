@@ -35,6 +35,9 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
+      - name: Foo
+        run: "ls -la . && ls -la ./dist"
+
       - name: "Packaging extension"
         uses: addnab/docker-run-action@4f65fabd2431ebc8d299f8e5a018d79a769ae185 # v3
         with:
@@ -43,8 +46,7 @@ jobs:
           run: |
             sudo chown -R node:node /workspaces/vscode-theme-my-darcula/dist &&
             task pack &&
-            ls -la ./ &&
             ls -la ./dist
 
-      - name: Foo
-        run: "ls -la ./dist"
+      - name: Foo2
+        run: "ls -la . && ls -la ./dist"
