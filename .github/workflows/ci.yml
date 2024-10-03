@@ -41,7 +41,7 @@ jobs:
 
       - name: "Packaging extension"
         run: |
-          docker run -it --rm builder:latest
+          docker run --rm builder:latest
           -v ${{ github.workspace }}/dist:/workspaces/vscode-theme-my-darcula/dist
           task pack
 
