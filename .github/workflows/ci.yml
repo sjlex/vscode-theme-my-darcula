@@ -34,7 +34,7 @@ jobs:
           context: .
           load: true
           push: false
-          tags: "builder:latest"
+          tags: "build-env:latest"
           cache-from: "type=gha"
           cache-to: "type=gha,mode=max"
 
@@ -42,7 +42,7 @@ jobs:
         run: |
           docker run --rm \
           -v ${{ github.workspace }}/dist:/workspaces/vscode-theme-my-darcula/dist \
-          builder:latest \
+          build-env:latest \
           sudo chown -R node:node ./dist && \
           task pack
 
