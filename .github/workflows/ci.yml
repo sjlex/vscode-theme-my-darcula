@@ -42,6 +42,7 @@ jobs:
         run: |
           docker run --rm \
           -v ${{ github.workspace }}/dist:/workspaces/vscode-theme-my-darcula/dist \
+          -u node \
           build-env:latest \
           sudo chown -R node:node ./dist && \
           task pack
