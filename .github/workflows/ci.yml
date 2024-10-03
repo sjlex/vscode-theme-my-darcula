@@ -37,9 +37,9 @@ jobs:
 
       - name: "Packaging extension"
         uses: addnab/docker-run-action@4f65fabd2431ebc8d299f8e5a018d79a769ae185 # v3
-        options: -v ${{ github.workspace }}/dist:/workspaces/vscode-theme-my-darcula/dist
         with:
           image: builder:latest
+          options: -v ${{ github.workspace }}/dist:/workspaces/vscode-theme-my-darcula/dist
           run: |
             task pack &&
             ls -la ./ &&
