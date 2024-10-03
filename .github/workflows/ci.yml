@@ -4,14 +4,17 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - ${{ github.event.repository.default_branch }}
+      - main
   pull_request:
     branches:
-      - ${{ github.event.repository.default_branch }}
+      - main
 
 jobs:
   checkout:
     uses: ./.github/workflows/checkout.yml
+    steps:
+      - name: Foo
+        run: "ls -la ./"
 
   check:
     steps:
