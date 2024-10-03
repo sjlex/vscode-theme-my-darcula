@@ -37,11 +37,10 @@ jobs:
           tags: "builder:latest"
           cache-from: "type=gha"
           cache-to: "type=gha,mode=max"
-          outputs: type=docker,dest=/tmp/builder-docker-img.tar
 
       - name: "Packaging extension"
         run: |
-          docker run --rm builder:latest
+          docker run --rm docker.io/library/builder:latest
           -v ${{ github.workspace }}/dist:/workspaces/vscode-theme-my-darcula/dist
           task pack
 
