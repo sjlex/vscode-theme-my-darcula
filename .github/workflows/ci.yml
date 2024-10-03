@@ -11,8 +11,8 @@ on:
 
 jobs:
   checkout:
-    uses: ./.github/workflows/checkout.yml
     steps:
+      - uses: ./.github/workflows/checkout.yml
       - name: Foo
         run: "ls -la ./"
 
