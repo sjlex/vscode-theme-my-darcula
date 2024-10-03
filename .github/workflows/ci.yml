@@ -43,6 +43,7 @@ jobs:
           docker run --rm \
           -v ${{ github.workspace }}/dist:/workspaces/vscode-theme-my-darcula/dist \
           docker.io/library/builder:latest \
+          sudo chown -R node:node ./dist && \
           task pack
 
       # - name: "Packaging extension"
