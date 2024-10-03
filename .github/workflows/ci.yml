@@ -37,19 +37,12 @@ jobs:
           tags: "builder:latest"
           cache-from: "type=gha"
           cache-to: "type=gha,mode=max"
+          outputs: type=docker,dest=/tmp/builder-docker-img.tar
 
-  pack:
-    needs: build-env
-    runs-on: "ubuntu-22.04"
-    timeout-minutes: 5
-    container:
-      image: "builder:latest"
-      volumes:
-        - "${{ github.workspace }}/dist:/workspaces/vscode-theme-my-darcula/dist"
-
-    steps:
       - name: "Packaging extension"
         run: |
+          docker run -it --rm
+          -v ${{ github.workspace }}/dist:/workspaces/vscode-theme-my-darcula/dist
           task pack
 
       # - name: "Packaging extension"
