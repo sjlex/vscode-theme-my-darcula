@@ -14,5 +14,6 @@ jobs:
     uses: ./.github/workflows/checkout.yml
 
   check:
-    - name: Foo
-      run: "ls -la ./"
+    steps:
+      - name: Foo
+        run: "ls -la ./"
