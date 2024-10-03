@@ -1,0 +1,18 @@
+name: "Checkout"
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - ${{ github.event.repository.default_branch }}
+  pull_request:
+    branches:
+      - ${{ github.event.repository.default_branch }}
+
+jobs:
+  checkout:
+    uses: ./.github/workflows/checkout.yml
+
+  check:
+    - name: Foo
+      run: "ls -la ./"
