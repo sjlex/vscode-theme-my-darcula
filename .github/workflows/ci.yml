@@ -10,7 +10,7 @@ on:
       - main
 
 jobs:
-  build:
+  build-env:
     runs-on: "ubuntu-22.04"
     timeout-minutes: 5
 
@@ -38,14 +38,27 @@ jobs:
           cache-from: "type=gha"
           cache-to: "type=gha,mode=max"
 
+  pack:
+    runs-on: "ubuntu-22.04"
+    timeout-minutes: 5
+    container:
+      image: "builder:latest"
+      volumes:
+        - "${{ github.workspace }}/dist:/workspaces/vscode-theme-my-darcula/dist"
+
+    steps:
       - name: "Packaging extension"
-        uses: "addnab/docker-run-action@4f65fabd2431ebc8d299f8e5a018d79a769ae185" # v3
-        with:
-          image: "builder:latest"
-          options: "-v ${{ github.workspace }}/dist:/workspaces/vscode-theme-my-darcula/dist"
-          run: |
-            sudo chown -R node:node ./dist &&
-            task pack
+        run: |
+          task pack
+
+      # - name: "Packaging extension"
+      #   uses: "addnab/docker-run-action@4f65fabd2431ebc8d299f8e5a018d79a769ae185" # v3
+      #   with:
+      #     image: "builder:latest"
+      #     options: "-v ${{ github.workspace }}/dist:/workspaces/vscode-theme-my-darcula/dist"
+      #     run: |
+      #       sudo chown -R node:node ./dist &&
+      #       task pack
 
       - name: "Upload a Build Artifact"
         uses: "actions/upload-artifact@50769540e7f4bd5e21e526ee35c689e35e0d6874" #v4.4.0
