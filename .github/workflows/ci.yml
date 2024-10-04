@@ -20,7 +20,7 @@ jobs:
         with:
           repository: "${{ github.repository }}"
           ref: "${{ github.event.repository.default_branch }}"
-          fetch-depth: 1
+          fetch-depth: 0
 
       - name: "Get Short GitHub SHA"
         uses: benjlevesque/short-sha@v3.0
@@ -58,5 +58,5 @@ jobs:
       - name: "Upload a Build Artifact"
         uses: "actions/upload-artifact@50769540e7f4bd5e21e526ee35c689e35e0d6874" #v4.4.0
         with:
-          name: "vscode-theme-my-darcula-${{ steps.version.outputs.version }}-${{ steps.short-sha.outputs.sha }}"
+          name: "vscode-theme-my-darcula_v${{ steps.version.outputs.version }}-${{ steps.short-sha.outputs.sha }}"
           path: "./dist/**/*.vsix"
