@@ -24,10 +24,9 @@ jobs:
 
       - name: "Get Short GitHub SHA"
         uses: benjlevesque/short-sha@v3.0
+        id: short-sha
         with:
-          id: short-sha
-          with:
-            length: 6
+          length: 6
 
       - name: "Git Version"
         id: version
