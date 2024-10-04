@@ -38,15 +38,6 @@ jobs:
           cache-from: "type=gha"
           cache-to: "type=gha,mode=max"
 
-      - name: "Set version"
-        uses: "addnab/docker-run-action@4f65fabd2431ebc8d299f8e5a018d79a769ae185" # v3
-        with:
-          image: "build-env:latest"
-          options: "-v ${{ github.workspace }}:/workspaces/vscode-theme-my-darcula/"
-          run: |
-            sudo chown -R node:node ./ &&
-            npm --no-git-tag-version version 1.1.7-abcad2
-
       - name: "Packaging extension"
         uses: "addnab/docker-run-action@4f65fabd2431ebc8d299f8e5a018d79a769ae185" # v3
         with:
@@ -54,6 +45,7 @@ jobs:
           options: "-v ${{ github.workspace }}/dist:/workspaces/vscode-theme-my-darcula/dist"
           run: |
             sudo chown -R node:node ./dist &&
+            npm --no-git-tag-version version 1.1.7-abcad2 &&
             task pack
 
       - name: "Upload a Build Artifact"
