@@ -9,7 +9,7 @@ vars:
   BUILD_PATH: "./dist"
 
   PACKAGE_NAME: "vscode-theme-my-darcula"
-  PACKAGE_PATH: "{{.BUILD_PATH}}/{{.PACKAGE_NAME}}-{{.PACKAGE_VERSION}}.vsix"
+  PACKAGE_PATH: "{{.BUILD_PATH}}/{{.PACKAGE_NAME}}_v{{.PACKAGE_VERSION}}.vsix"
 
   WORKSPACE_DIR: "/workspaces/{{.PACKAGE_NAME}}"
 
