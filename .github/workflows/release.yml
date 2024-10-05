@@ -19,7 +19,7 @@ jobs:
         with:
           repository: "${{ github.repository }}"
           ref: "${{ github.event.repository.default_branch }}"
-          fetch-depth: 1
+          fetch-depth: 0
 
       - name: "Get tag"
         id: tag
@@ -60,4 +60,4 @@ jobs:
       - name: "Release"
         uses: "softprops/action-gh-release@c062e08bd532815e2082a85e87e3ef29c3e6d191" # v2.0.8
         with:
-          files: "./dist/*.vsix"
+          files: "./dist/**/*.vsix"
