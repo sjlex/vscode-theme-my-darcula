@@ -3,7 +3,10 @@ name: "Release"
 on:
   workflow_dispatch:
   push:
-    tags: [ 'v*.*.*' ]
+    tags: ["v*.*.*"]
+
+permissions:
+  contents: write
 
 jobs:
   build-env:
@@ -56,7 +59,5 @@ jobs:
 
       - name: "Release"
         uses: "softprops/action-gh-release@c062e08bd532815e2082a85e87e3ef29c3e6d191" # v2.0.8
-        permissions:
-          contents: write
         with:
           files: "./dist/*.vsix"
