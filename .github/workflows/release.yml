@@ -53,3 +53,8 @@ jobs:
         with:
           name: "vscode-theme-my-darcula_v${{ steps.tag.outputs.GITHUB_TAG_LAST }}"
           path: "./dist/**/*.vsix"
+
+      - name: "Release"
+        uses: "softprops/action-gh-release@c062e08bd532815e2082a85e87e3ef29c3e6d191" # v2.0.8
+        with:
+          files: "./dist/*.vsix"
