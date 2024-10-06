@@ -1,0 +1,36 @@
+name: "Release"
+
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
+
+jobs:
+  create-release-tag:
+    if: |
+      github.event.pull_request.merged == true &&
+      startsWith(github.head_ref, 'release/v*.*.*')
+    runs-on: "ubuntu-22.04"
+    timeout-minutes: 5
+    outputs:
+      git-tag: ${{ steps.git-tag.outputs.GITHUB_TAG_LAST }}
+      package-version: ${{ steps.package-version.outputs.PACKAGE_VERSION }}
+
+    steps:
+      - name: "Checkout Repo"
+        uses: "actions/checkout@d632683dd7b4114ad314bca15554477dd762a938" # v4.2.0
+        with:
+          fetch-depth: 0
+
+      - name: "Get package version"
+        id: package-version
+        run: |
+          echo "PACKAGE_VERSION=$(grep -o '"version": "[^"]*"' package.json | sed 's/"version": "\(.*\)"/\1/')" >> "$GITHUB_OUTPUT"
+
+      - name: "Create/Update tag"
+        uses: "rickstaa/action-create-tag@a1c7777fcb2fee4f19b0f283ba888afa11678b72" # v1.7.2
+        with:
+          tag: "v${{ steps.package-version.outputs.PACKAGE_VERSION }}"
+          tag_exists_error: true

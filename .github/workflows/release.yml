@@ -41,7 +41,7 @@ jobs:
     needs: version-check
     if: ${{ needs.version-check.outputs.git-tag == needs.version-check.outputs.package-version }}
     runs-on: "ubuntu-22.04"
-    timeout-minutes: 5
+    timeout-minutes: 10
 
     steps:
       - name: "Checkout Repo"
@@ -71,13 +71,13 @@ jobs:
           options: "-v ${{ github.workspace }}/dist:/workspaces/vscode-theme-my-darcula/dist"
           run: |
             sudo chown -R node:node ./dist &&
-            npm --no-git-tag-version version ${{ steps.git-tag.outputs.GITHUB_TAG_LAST }} &&
+            npm --no-git-tag-version version ${{ needs.version-check.outputs.git-tag }} &&
             task pack
 
       - name: "Upload a Build Artifact"
         uses: "actions/upload-artifact@50769540e7f4bd5e21e526ee35c689e35e0d6874" #v4.4.0
         with:
-          name: "vscode-theme-my-darcula_v${{ steps.git-tag.outputs.GITHUB_TAG_LAST }}"
+          name: "vscode-theme-my-darcula_v${{ needs.version-check.outputs.git-tag }}"
           path: "./dist/**/*.vsix"
 
       - name: "Release"
