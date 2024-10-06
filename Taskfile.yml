@@ -58,9 +58,11 @@ tasks:
         --allow-missing-repository
         -o {{.PACKAGE_PATH}}
 
-  # TODO
   "publish":
     desc: "Publish VSCode Extension"
+    cmds:
+      - yarn exec
+        vsce publish
 
   # ----------------------------------------------------------------------------
   # Docker
