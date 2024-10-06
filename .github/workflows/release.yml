@@ -37,8 +37,8 @@ jobs:
       - name: "Version check"
         if: ${{ steps.git-tag.outputs.GITHUB_TAG_LAST != steps.package-version.outputs.PACKAGE_VERSION }}
         run: |
-          echo ${ steps.git-tag.outputs.GITHUB_TAG_LAST } &&
-          echo ${ steps.package-version.outputs.PACKAGE_VERSION } &&
+          echo ${{ steps.git-tag.outputs.GITHUB_TAG_LAST }} &&
+          echo ${{ steps.package-version.outputs.PACKAGE_VERSION }} &&
           exit 1
 
   release:
