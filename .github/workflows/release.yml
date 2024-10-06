@@ -35,7 +35,7 @@ jobs:
           echo "PACKAGE_VERSION=$(grep -o '"version": "[^"]*"' package.json | sed 's/"version": "\(.*\)"/\1/')" >> "$GITHUB_OUTPUT"
 
       - name: "Version check"
-        if: ${{ needs.version-check.outputs.git-tag != needs.version-check.outputs.package-version }}
+        if: ${{ steps.git-tag.outputs.GITHUB_TAG_LAST != steps.package-version.outputs.PACKAGE_VERSION }}
         run: |
           exit 1
 
