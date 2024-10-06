@@ -1,13 +1,20 @@
 version: "3"
 
+env:
+  PACKAGE_VERSION:
+    sh: |
+      grep -o '"version": "[^"]*"' package.json | sed 's/"version": "\(.*\)"/\1/'
+
 vars:
   BUILD_PATH: "./dist"
 
   PACKAGE_NAME: "vscode-theme-my-darcula"
-  PACKAGE_VERSION: "1.0.0"
-  PACKAGE_PATH: "{{.BUILD_PATH}}/{{.PACKAGE_NAME}}-{{.PACKAGE_VERSION}}.vsix"
+  PACKAGE_PATH: "{{.BUILD_PATH}}/{{.PACKAGE_NAME}}_v{{.PACKAGE_VERSION}}.vsix"
 
   WORKSPACE_DIR: "/workspaces/{{.PACKAGE_NAME}}"
+
+  DOCKER_IMAGE: "{{.PACKAGE_NAME}}:{{.PACKAGE_VERSION}}"
+  DOCKERFILE_PATH: "./Dockerfile"
 
   DEV_DOCKER_IMAGE: "{{.PACKAGE_NAME}}:{{.PACKAGE_VERSION}}-dev"
   DEV_DOCKERFILE_PATH: ".devcontainer/Dockerfile.dev"
@@ -51,16 +58,36 @@ tasks:
         --allow-missing-repository
         -o {{.PACKAGE_PATH}}
 
-  # TODO
   "publish":
     desc: "Publish VSCode Extension"
+    cmds:
+      - yarn exec
+        vsce publish
 
   # ----------------------------------------------------------------------------
   # Docker
   # ----------------------------------------------------------------------------
 
-  "dev:docker:run":
+  "docker:run":
     desc: "Run docker container"
+    cmds:
+      - docker run -it --rm
+        -v {{.ROOT_DIR}}:{{.WORKSPACE_DIR}}
+        -w {{.WORKSPACE_DIR}}
+        {{.DOCKER_IMAGE}}
+        {{.CLI_ARGS}} || true
+
+  "docker:build":
+    desc: "Build docker image"
+    cmds:
+      - docker buildx build
+        -t {{.DOCKER_IMAGE}}
+        -f {{.DOCKERFILE_PATH}}
+        {{.ROOT_DIR}}
+        {{.CLI_ARGS}}
+
+  "dev:docker:run":
+    desc: "Run dev container"
     cmds:
       - docker run -it --rm
         -v {{.ROOT_DIR}}:{{.WORKSPACE_DIR}}
@@ -69,7 +96,7 @@ tasks:
         {{.CLI_ARGS}} || true
 
   "dev:docker:build":
-    desc: "Build docker image"
+    desc: "Build dev image"
     cmds:
       - docker buildx build
         -t {{.DEV_DOCKER_IMAGE}}

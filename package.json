@@ -1,10 +1,19 @@
 {
 	"name": "vscode-theme-my-darcula",
-	"displayName": "vscode-theme-my-darcula",
+	"version": "1.1.20",
+	"displayName": "Vscode Theme My Darcula",
 	"description": "My personal theme for Visual Studio Code, based on the Darcula theme from JetBrains IDEs.",
-	"version": "1.0.0",
 	"author": "Sergei Aleksandrov <sergei.a.aleks@gmail.com>",
+	"homepage": "https://github.com/sjlex/vscode-theme-my-darcula",
+	"publisher": "my-theme-inc",
 	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/sjlex/vscode-theme-my-darcula.git"
+	},
+	"bugs": {
+		"url": "https://github.com/sjlex/vscode-theme-my-darcula/issues"
+	},
 	"packageManager": "yarn@4.5.0",
 	"engines": {
 		"vscode": "^1.93.0"
@@ -14,8 +23,16 @@
 	],
 	"keywords": [
 		"theme",
-		"dark"
+		"color-theme",
+		"dark",
+		"minimal",
+		"clean"
 	],
+	"icon": "assets/icon.png",
+	"galleryBanner": {
+		"color": "#000000",
+		"theme": "dark"
+	},
 	"contributes": {
 		"themes": [
 			{
@@ -27,5 +44,10 @@
 	},
 	"devDependencies": {
 		"@vscode/vsce": "^3.1.0"
+	},
+	"vsce": {
+		"baseImagesUrl": "https://my.custom/base/images/url",
+		"dependencies": false,
+		"yarn": true
 	}
 }
