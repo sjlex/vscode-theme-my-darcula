@@ -5,7 +5,7 @@ on:
     types:
       - closed
     branches:
-      - main
+      - $default-branch
 
 permissions:
   contents: write
@@ -39,3 +39,8 @@ jobs:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           gpg_passphrase: ${{ secrets.GPG_PRIVATE_KEY_PASSPHRASE }}
           tag_exists_error: true
+
+      - name: "PUSH"
+        run: |
+          git commit --allow-empty -m "1"
+          git push

@@ -4,11 +4,11 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - main
+      - $default-branch
     tags-ignore: ["v*.*.*"]
   pull_request:
     branches:
-      - main
+      - $default-branch
     tags-ignore: ["v*.*.*"]
 
 jobs:
