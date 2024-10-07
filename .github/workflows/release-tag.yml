@@ -40,10 +40,3 @@ jobs:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           gpg_passphrase: ${{ secrets.GPG_PRIVATE_KEY_PASSPHRASE }}
           tag_exists_error: true
-
-      - name: "PUSH"
-        run: |
-          git config user.email "sergei.a.aleks@gmail.com"
-          git config user.name "Sergei Aleksandrov"
-          git commit --allow-empty -m "1"
-          git push

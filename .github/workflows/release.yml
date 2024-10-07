@@ -4,8 +4,6 @@ on:
   workflow_dispatch:
   push:
     tags: ["v*.*.*"]
-  create:
-    tags: ["v*.*.*"]
 
 permissions:
   contents: write
