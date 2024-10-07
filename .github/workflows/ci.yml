@@ -54,7 +54,10 @@ jobs:
           options: "-v ${{ github.workspace }}/dist:/workspaces/vscode-theme-my-darcula/dist"
           run: |
             sudo chown -R node:node ./dist &&
-            npm --no-git-tag-version version ${{ steps.package-version.outputs.PACKAGE_VERSION }}-${{ steps.short-sha.outputs.sha }} &&
+            npm \
+            --allow-same-version \
+            --no-git-tag-version \
+            version ${{ steps.package-version.outputs.PACKAGE_VERSION }}-${{ steps.short-sha.outputs.sha }} &&
             task pack
 
       - name: "Upload a Build Artifact"
