@@ -42,5 +42,7 @@ jobs:
 
       - name: "PUSH"
         run: |
+          git config user.email "sergei.a.aleks@gmail.com"
+          git config user.name "Sergei Aleksandrov"
           git commit --allow-empty -m "1"
           git push
