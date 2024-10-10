@@ -4,9 +4,9 @@
 	"displayName": "Vscode Theme My Darcula",
 	"description": "My personal theme for Visual Studio Code, based on the Darcula theme from JetBrains IDEs.",
 	"author": "Sergei Aleksandrov <sergei.a.aleks@gmail.com>",
-	"homepage": "https://github.com/sjlex/vscode-theme-my-darcula",
 	"publisher": "my-theme-inc",
 	"license": "MIT",
+	"homepage": "https://github.com/sjlex/vscode-theme-my-darcula",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/sjlex/vscode-theme-my-darcula.git"

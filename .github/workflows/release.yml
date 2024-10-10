@@ -70,3 +70,10 @@ jobs:
         uses: "softprops/action-gh-release@c062e08bd532815e2082a85e87e3ef29c3e6d191" # v2.0.8
         with:
           files: "./dist/**/*.vsix"
+
+      - name: "Publish"
+        uses: "addnab/docker-run-action@4f65fabd2431ebc8d299f8e5a018d79a769ae185" # v3
+        with:
+          image: "build-env:latest"
+          run: |
+            task publish
