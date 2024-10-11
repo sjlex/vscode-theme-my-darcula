@@ -43,6 +43,7 @@
 		]
 	},
 	"devDependencies": {
+		"@changesets/cli": "^2.27.9",
 		"@vscode/vsce": "^3.1.0"
 	},
 	"vsce": {
