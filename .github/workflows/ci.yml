@@ -29,16 +29,16 @@ jobs:
       - name: "Get Short Commit SHA"
         id: git-commit-sha-short
         run: |
-          echo "GIT_COMMIT_SHA_SHORT=$(git rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
+          echo "GIT_COMMIT_SHA_SHORT=$(git rev-parse --short HEAD)" >> "$GITHUB_ENV"
 
       - name: "Get package version"
         id: package-version
         run: |
-          echo "PACKAGE_VERSION=$(grep -o '"version": "[^"]*"' package.json | sed 's/"version": "\(.*\)"/\1/')" >> "$GITHUB_OUTPUT"
+          echo "PACKAGE_VERSION=$(grep -o '"version": "[^"]*"' package.json | sed 's/"version": "\(.*\)"/\1/')" >> "$GITHUB_ENV"
 
       - name: "aaa"
         run: |
-          echo $GITHUB_OUTPUT
+          echo $GITHUB_ENV
           echo $PACKAGE_VERSION ${{ env.PACKAGE_VERSION }}
           echo $GIT_COMMIT_SHA_SHORT ${{ env.GIT_COMMIT_SHA_SHORT }}
 
