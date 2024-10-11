@@ -36,8 +36,7 @@ jobs:
         run: |
           echo "PACKAGE_VERSION=$(grep -o '"version": "[^"]*"' package.json | sed 's/"version": "\(.*\)"/\1/')" >> "$GITHUB_OUTPUT"
 
-      - name: "Get package version"
-        id: package-version
+      - name: "aaa"
         run: |
           echo "$PACKAGE_VERSION" ${{ env.PACKAGE_VERSION }}
           echo "$GIT_COMMIT_SHA_SHORT" ${{ env.GIT_COMMIT_SHA_SHORT }}
