@@ -18,13 +18,7 @@ jobs:
 
     env:
       PACKAGE_NAME: "vscode-theme-darcula-void"
-      PACKAGE_VERSION: ""
-      GIT_COMMIT_SHA_SHORT: ""
       DIST_DIR: "dist"
-      MOUNT_DIR: "${{ github.workspace }}/${{ env.DIST_DIR }}"
-      MOUNT_TARGET_DIR: "/workspaces/${{ env.PACKAGE_NAME }}/${{ env.DIST_DIR }}"
-      ARTIFACT_PATH: "./${{ env.DIST_DIR }}/**/*.vsix"
-      ARTIFACT_NAME: "${{ env.PACKAGE_NAME }}_v${{ env.PACKAGE_VERSION }}-${{ env.GIT_COMMIT_SHA_SHORT }}"
 
     steps:
       - name: "Checkout Repo"
@@ -59,6 +53,9 @@ jobs:
 
       - name: "Packaging extension"
         uses: "addnab/docker-run-action@4f65fabd2431ebc8d299f8e5a018d79a769ae185" # v3
+        env:
+          MOUNT_DIR: "${{ github.workspace }}/${{ env.DIST_DIR }}"
+          MOUNT_TARGET_DIR: "/workspaces/${{ env.PACKAGE_NAME }}/${{ env.DIST_DIR }}"
         with:
           image: "builder:latest"
           options: "-v ${{ env.MOUNT_DIR }}:${{ env.MOUNT_TARGET_DIR }}"
@@ -72,6 +69,9 @@ jobs:
 
       - name: "Upload a Build Artifact"
         uses: "actions/upload-artifact@50769540e7f4bd5e21e526ee35c689e35e0d6874" #v4.4.0
+        env:
+          ARTIFACT_PATH: "./${{ env.DIST_DIR }}/**/*.vsix"
+          ARTIFACT_NAME: "${{ env.PACKAGE_NAME }}_v${{ env.PACKAGE_VERSION }}-${{ env.GIT_COMMIT_SHA_SHORT }}"
         with:
           name: ${{ env.ARTIFACT_NAME }}
           path: ${{ env.ARTIFACT_PATH }}
