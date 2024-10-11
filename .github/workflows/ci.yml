@@ -38,8 +38,9 @@ jobs:
 
       - name: "aaa"
         run: |
-          echo "$PACKAGE_VERSION" ${{ env.PACKAGE_VERSION }}
-          echo "$GIT_COMMIT_SHA_SHORT" ${{ env.GIT_COMMIT_SHA_SHORT }}
+          echo $GITHUB_OUTPUT
+          echo $PACKAGE_VERSION ${{ env.PACKAGE_VERSION }}
+          echo $GIT_COMMIT_SHA_SHORT ${{ env.GIT_COMMIT_SHA_SHORT }}
 
       # - name: "Set up Docker Buildx"
       #   uses: "docker/setup-buildx-action@8026d2bc3645ea78b0d2544766a1225eb5691f89" # v3.7.0
