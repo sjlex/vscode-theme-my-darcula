@@ -18,8 +18,8 @@ jobs:
 
     env:
       PACKAGE_NAME: "vscode-theme-darcula-void"
-      PACKAGE_VERSION: ${{ steps.package-version.outputs.PACKAGE_VERSION }}
-      GIT_COMMIT_SHA_SHORT: ${{ steps.short-sha.outputs.sha }}
+      PACKAGE_VERSION: ""
+      GIT_COMMIT_SHA_SHORT: ""
       DIST_DIR: "dist"
       MOUNT_DIR: "${{ github.workspace }}/${{ env.DIST_DIR }}"
       MOUNT_TARGET_DIR: "/workspaces/${{ env.PACKAGE_NAME }}/${{ env.DIST_DIR }}"
@@ -32,11 +32,10 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: "Get Short GitHub SHA"
-        uses: "benjlevesque/short-sha@599815c8ee942a9616c92bcfb4f947a3b670ab0b" # v3.0
-        id: short-sha
-        with:
-          length: 7
+      - name: "Get Short Commit SHA"
+        id: git-commit-sha-short
+        run: |
+          echo "GIT_COMMIT_SHA_SHORT=$(git rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
 
       - name: "Get package version"
         id: package-version
