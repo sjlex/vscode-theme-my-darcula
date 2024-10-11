@@ -36,42 +36,48 @@ jobs:
         run: |
           echo "PACKAGE_VERSION=$(grep -o '"version": "[^"]*"' package.json | sed 's/"version": "\(.*\)"/\1/')" >> "$GITHUB_OUTPUT"
 
-      - name: "Set up Docker Buildx"
-        uses: "docker/setup-buildx-action@8026d2bc3645ea78b0d2544766a1225eb5691f89" # v3.7.0
+      - name: "Get package version"
+        id: package-version
+        run: |
+          echo "$PACKAGE_VERSION" ${{ env.PACKAGE_VERSION }}
+          echo "$GIT_COMMIT_SHA_SHORT" ${{ env.GIT_COMMIT_SHA_SHORT }}
 
-      - name: "Build Docker images"
-        uses: "docker/build-push-action@4f58ea79222b3b9dc2c8bbdd6debcef730109a75" # v6.9.0
-        env:
-          DOCKER_BUILD_SUMMARY: false
-        with:
-          context: .
-          load: true
-          push: false
-          tags: "builder:latest"
-          cache-from: "type=gha"
-          cache-to: "type=gha,mode=max"
+      # - name: "Set up Docker Buildx"
+      #   uses: "docker/setup-buildx-action@8026d2bc3645ea78b0d2544766a1225eb5691f89" # v3.7.0
 
-      - name: "Packaging extension"
-        uses: "addnab/docker-run-action@4f65fabd2431ebc8d299f8e5a018d79a769ae185" # v3
-        env:
-          MOUNT_DIR: "${{ github.workspace }}/${{ env.DIST_DIR }}"
-          MOUNT_TARGET_DIR: "/workspaces/${{ env.PACKAGE_NAME }}/${{ env.DIST_DIR }}"
-        with:
-          image: "builder:latest"
-          options: "-v ${{ env.MOUNT_DIR }}:${{ env.MOUNT_TARGET_DIR }}"
-          run: |
-            sudo chown -R node:node ./dist &&
-            npm \
-            --allow-same-version \
-            --no-git-tag-version \
-            version ${{ env.PACKAGE_VERSION }}-${{ env.GIT_COMMIT_SHA_SHORT }} &&
-            task pack
+      # - name: "Build Docker images"
+      #   uses: "docker/build-push-action@4f58ea79222b3b9dc2c8bbdd6debcef730109a75" # v6.9.0
+      #   env:
+      #     DOCKER_BUILD_SUMMARY: false
+      #   with:
+      #     context: .
+      #     load: true
+      #     push: false
+      #     tags: "builder:latest"
+      #     cache-from: "type=gha"
+      #     cache-to: "type=gha,mode=max"
 
-      - name: "Upload a Build Artifact"
-        uses: "actions/upload-artifact@50769540e7f4bd5e21e526ee35c689e35e0d6874" #v4.4.0
-        env:
-          ARTIFACT_PATH: "./${{ env.DIST_DIR }}/**/*.vsix"
-          ARTIFACT_NAME: "${{ env.PACKAGE_NAME }}_v${{ env.PACKAGE_VERSION }}-${{ env.GIT_COMMIT_SHA_SHORT }}"
-        with:
-          name: ${{ env.ARTIFACT_NAME }}
-          path: ${{ env.ARTIFACT_PATH }}
+      # - name: "Packaging extension"
+      #   uses: "addnab/docker-run-action@4f65fabd2431ebc8d299f8e5a018d79a769ae185" # v3
+      #   env:
+      #     MOUNT_DIR: "${{ github.workspace }}/${{ env.DIST_DIR }}"
+      #     MOUNT_TARGET_DIR: "/workspaces/${{ env.PACKAGE_NAME }}/${{ env.DIST_DIR }}"
+      #   with:
+      #     image: "builder:latest"
+      #     options: "-v ${{ env.MOUNT_DIR }}:${{ env.MOUNT_TARGET_DIR }}"
+      #     run: |
+      #       sudo chown -R node:node ./dist &&
+      #       npm \
+      #       --allow-same-version \
+      #       --no-git-tag-version \
+      #       version ${{ env.PACKAGE_VERSION }}-${{ env.GIT_COMMIT_SHA_SHORT }} &&
+      #       task pack
+
+      # - name: "Upload a Build Artifact"
+      #   uses: "actions/upload-artifact@50769540e7f4bd5e21e526ee35c689e35e0d6874" #v4.4.0
+      #   env:
+      #     ARTIFACT_PATH: "./${{ env.DIST_DIR }}/**/*.vsix"
+      #     ARTIFACT_NAME: "${{ env.PACKAGE_NAME }}_v${{ env.PACKAGE_VERSION }}-${{ env.GIT_COMMIT_SHA_SHORT }}"
+      #   with:
+      #     name: ${{ env.ARTIFACT_NAME }}
+      #     path: ${{ env.ARTIFACT_PATH }}
