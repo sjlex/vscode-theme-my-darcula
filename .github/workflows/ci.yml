@@ -11,10 +11,19 @@ on:
       - main
     tags-ignore: ["v*.*.*"]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+
+permissions: {} # disable permissions
+
 jobs:
   build:
     runs-on: "ubuntu-22.04"
     timeout-minutes: 10
+
+    permissions:
+      contents: write
+      pull-requests: write
 
     env:
       PACKAGE_NAME: "vscode-theme-my-darcula"
@@ -75,3 +84,6 @@ jobs:
         with:
           name: ${{ env.ARTIFACT_NAME }}
           path: ${{ env.ARTIFACT_PATH }}
+
+      - name: "Create Release Pull Request"
+        uses: changesets/action@v1

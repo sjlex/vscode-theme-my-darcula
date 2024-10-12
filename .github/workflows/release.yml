@@ -8,13 +8,17 @@ on:
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
 
-permissions:
-  contents: write
+permissions: {} # disable permissions
 
 jobs:
   release:
+    if: github.repository == 'sjlex/vscode-theme-my-darcula'
     runs-on: "ubuntu-22.04"
     timeout-minutes: 10
+
+    permissions:
+      contents: write
+      pull-requests: write
 
     env:
       PACKAGE_NAME: "vscode-theme-my-darcula"
