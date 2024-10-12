@@ -1,5 +1,11 @@
 # vscode-theme-my-darcula
 
+## 1.5.7
+
+### Patch Changes
+
+- 1
+
 ## 1.5.6
 
 ### Patch Changes
