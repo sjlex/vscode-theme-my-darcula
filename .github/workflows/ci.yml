@@ -114,7 +114,7 @@ jobs:
         with:
           createGithubReleases: false
           version: yarn exec changeset version
-          # publish: yarn exec changeset tag
+          publish: yarn exec changeset tag
 
       - name: Publish
         if: steps.changesets.outputs.published == 'true'
