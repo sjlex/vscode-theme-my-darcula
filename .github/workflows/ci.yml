@@ -113,3 +113,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           version: yarn exec changeset version
+          publish: yarn exec changeset tag
