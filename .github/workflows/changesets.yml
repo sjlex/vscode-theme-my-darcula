@@ -41,8 +41,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_ACCESS_TOKEN }}
         with:
-          createGithubReleases: false
-          commit: "chore(repo): Version packages"
+          createGithubReleases: true
+          commit: "chore(repo): Version packages [skip ci]"
           version: yarn exec changeset version
           publish: yarn exec changeset tag
 
