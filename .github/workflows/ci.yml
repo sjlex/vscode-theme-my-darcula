@@ -14,7 +14,7 @@ on:
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
 
-permissions: {} # disable permissions
+# permissions: {} # disable permissions
 
 jobs:
   # build:
@@ -111,3 +111,5 @@ jobs:
         uses: changesets/action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          version: yarn exec changeset version
