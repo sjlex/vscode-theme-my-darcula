@@ -36,11 +36,10 @@ jobs:
       - name: Install Dependencies
         run: corepack enable && yarn install --immutable
 
-
-      - name: "aaa"
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+      # - name: "aaa"
+      #   run: |
+      #     git config user.name "github-actions[bot]"
+      #     git config user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Import GPG
         uses: crazy-max/ghaction-import-gpg@v6.1.0
