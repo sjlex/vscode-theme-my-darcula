@@ -25,8 +25,7 @@ jobs:
       )
 
     permissions:
-      contents: write
-      pull-requests: write
+      contents: read
 
     env:
       PACKAGE_NAME: "vscode-theme-my-darcula"
