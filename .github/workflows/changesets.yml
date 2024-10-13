@@ -40,6 +40,7 @@ jobs:
         run: |
           git config user.name "Sergei Aleksandrov"
           git config user.email "sergei.a.aleks@gmail.com"
+          git config user.signingkey 0EDAF784F80BA6ED
 
       - name: "Create Release Pull Request"
         uses: changesets/action@v1
