@@ -35,6 +35,12 @@ jobs:
       - name: Install Dependencies
         run: corepack enable && yarn install --immutable
 
+
+      - name: "aaa"
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "sergei.a.aleks@gmail.com"
+
       - name: "Create Release Pull Request"
         uses: changesets/action@v1
         id: changesets
@@ -42,6 +48,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           createGithubReleases: false
+          setupGitUser: false
           commit: "chore(repo): Version packages [skip ci]"
           version: yarn exec changeset version
           publish: yarn exec changeset tag
