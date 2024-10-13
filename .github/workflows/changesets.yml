@@ -9,16 +9,10 @@ on:
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
 
-permissions: {} # disable permissions
-
 jobs:
   changesets:
     runs-on: "ubuntu-22.04"
     timeout-minutes: 10
-
-    permissions:
-      contents: write
-      pull-requests: write
 
     steps:
       - name: "Checkout Repo"
@@ -28,7 +22,7 @@ jobs:
           token: ${{ secrets.GIT_ACCESS_TOKEN }}
           persist-credentials: false
 
-      - name: Setup Node.js 20
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 22
@@ -46,7 +40,3 @@ jobs:
           commit: "chore(repo): Version packages [skip ci]"
           version: yarn exec changeset version
           publish: yarn exec changeset tag
-
-      - name: Publish
-        if: steps.changesets.outputs.published == 'true'
-        run: echo "Publish"
