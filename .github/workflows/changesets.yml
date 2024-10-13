@@ -26,6 +26,7 @@ jobs:
         uses: "actions/checkout@d632683dd7b4114ad314bca15554477dd762a938" # v4.2.0
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -40,7 +41,6 @@ jobs:
         run: |
           git config user.name "Sergei Aleksandrov"
           git config user.email "sergei.a.aleks@gmail.com"
-          git config user.signingkey 0EDAF784F80BA6ED
 
       - name: "Create Release Pull Request"
         uses: changesets/action@v1
