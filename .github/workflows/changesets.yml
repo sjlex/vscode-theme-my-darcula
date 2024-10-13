@@ -9,10 +9,17 @@ on:
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
 
+permissions: {} # disable permissions
+
 jobs:
   changesets:
     runs-on: "ubuntu-22.04"
     timeout-minutes: 10
+
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
 
     steps:
       - name: "Checkout Repo"
