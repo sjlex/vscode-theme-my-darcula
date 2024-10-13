@@ -39,7 +39,7 @@ jobs:
         uses: changesets/action@v1
         id: changesets
         env:
-          GITHUB_TOKEN: ${{ secrets.PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           createGithubReleases: false
           commit: "chore(repo): Version packages [skip ci]"
