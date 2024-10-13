@@ -9,6 +9,8 @@ on:
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
 
+permissions: write-all
+
 jobs:
   changesets:
     runs-on: "ubuntu-22.04"
