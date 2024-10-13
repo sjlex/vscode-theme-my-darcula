@@ -2,14 +2,14 @@ name: "CI"
 
 on:
   workflow_dispatch:
-  push:
-    tags-ignore:
-      - "v*.*.*"
-    branches-ignore:
-      - 'changeset-release/*'
-  pull_request:
-    branches:
-      - '*'
+  # push:
+  #   tags-ignore:
+  #     - "v*.*.*"
+  #   branches-ignore:
+  #     - 'changeset-release/*'
+  # pull_request:
+  #   branches:
+  #     - '*'
 
 permissions: {} # disable permissions
 
