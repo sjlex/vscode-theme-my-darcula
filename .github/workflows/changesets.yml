@@ -9,8 +9,6 @@ on:
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
 
-permissions: write-all
-
 jobs:
   changesets:
     runs-on: "ubuntu-22.04"
@@ -34,7 +32,7 @@ jobs:
         uses: changesets/action@v1
         id: changesets
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN  }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           createGithubReleases: true
           commit: "chore(repo): Version packages [skip ci]"
