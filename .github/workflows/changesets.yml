@@ -39,8 +39,16 @@ jobs:
 
       - name: "aaa"
         run: |
-          git config user.name "Sergei Aleksandrov"
-          git config user.email "sergei.a.aleks@gmail.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions@users.noreply.github.com"
+
+      - name: Import GPG
+        uses: crazy-max/ghaction-import-gpg@v6.1.0
+        with:
+          git_user_signingkey: true
+          git_commit_gpgsign: true
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.ACTIONS_GPG_KEY }}
 
       - name: "Create Release Pull Request"
         uses: changesets/action@v1
