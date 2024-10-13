@@ -38,7 +38,7 @@ jobs:
 
       - name: "aaa"
         run: |
-          git config user.name "github-actions[bot]"
+          git config user.name "Sergei Aleksandrov"
           git config user.email "sergei.a.aleks@gmail.com"
 
       - name: "Create Release Pull Request"
