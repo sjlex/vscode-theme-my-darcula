@@ -46,6 +46,10 @@ jobs:
           git config user.name "github-actions[bot]"
           # git remote set-url origin https://x-access-token/:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/${{ github.repository }}
 
+      - name: Foo2
+        run: |
+          git config --list
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
