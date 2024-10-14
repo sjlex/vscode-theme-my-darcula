@@ -42,8 +42,8 @@ jobs:
 
       - name:  Bar
         run: |
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config user.name "github-actions[bot]"
+          git config user.email "github-actions@github.com"
+          git config user.name "github-actions"
           # git remote set-url origin https://x-access-token/:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/${{ github.repository }}
 
       - name: Foo2
