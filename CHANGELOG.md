@@ -1,5 +1,11 @@
 # vscode-theme-my-darcula
 
+## 1.5.23
+
+### Patch Changes
+
+- [`b8d5d32`](https://github.com/sjlex/vscode-theme-my-darcula/commit/b8d5d32c62a130b9815040983e3105e1ae54f5fe) Thanks [@sjlex](https://github.com/sjlex)! - 1
+
 ## 1.5.22
 
 ### Patch Changes
