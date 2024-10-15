@@ -79,6 +79,9 @@ jobs:
             version ${{ env.ARTIFACT_VERSION }} &&
             task pack
 
+      - name: "Foo"
+        run: echo $GITHUB_ENV
+
       - name: "Upload a Build Artifact"
         uses: "actions/upload-artifact@50769540e7f4bd5e21e526ee35c689e35e0d6874" #v4.4.0
         env:
@@ -87,3 +90,6 @@ jobs:
         with:
           name: ${{ env.ARTIFACT_NAME }}
           path: ${{ env.ARTIFACT_PATH }}
+
+      - name: "Foo2"
+        run: echo $GITHUB_ENV
