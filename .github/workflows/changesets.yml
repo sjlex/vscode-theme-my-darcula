@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - main
+      - '*'
   pull_request:
     branches:
       - main
@@ -16,9 +16,6 @@ permissions: {} # disable permissions
 
 jobs:
   changesets:
-    if: |
-      github.event_name == 'push' ||
-      github.event.pull_request.merged == true
     runs-on: "ubuntu-22.04"
     timeout-minutes: 10
 
