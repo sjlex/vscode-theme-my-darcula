@@ -1,4 +1,5 @@
 dist
+design
 
 **/Dockerfile*
 **/.dockerignore
@@ -8,6 +9,7 @@ dist
 **/.gitattributes
 
 **/.github
+**/.changeset
 **/.devcontainer
 **/.env
 
