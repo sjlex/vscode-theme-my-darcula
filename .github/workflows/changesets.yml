@@ -1,6 +1,7 @@
 name: "Changesets"
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -33,10 +34,8 @@ jobs:
         with:
           node-version: "22.9.0"
 
-      - name: "Install Changesets"
-        run: |
-          npm install --no-save @changesets/cli@$(node -pe "require('./package').devDependencies['@changesets/cli']") &&
-          npm install --no-save @changesets/changelog-github@$(node -pe "require('./package').devDependencies['@changesets/changelog-github']")
+      - name: "Install Dependencies"
+        run: corepack enable && yarn install --immutable
 
       - name: "Create Release Pull Request"
         uses: changesets/action@c8bada60c408975afd1a20b3db81d6eee6789308 # v1.4.9
@@ -45,5 +44,5 @@ jobs:
         with:
           createGithubReleases: true
           commit: "chore(changesets): 📦 Version packages"
-          version: "npm exec changeset version"
-          publish: "npm exec changeset tag"
+          version: "yarn exec changeset version"
+          publish: "yarn exec changeset tag"

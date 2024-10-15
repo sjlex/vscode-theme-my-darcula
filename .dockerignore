@@ -1,4 +1,5 @@
 dist
+design
 
 **/Dockerfile*
 **/.dockerignore
