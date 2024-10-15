@@ -18,7 +18,7 @@ jobs:
   changesets:
     if: |
       github.event_name == 'push' ||
-      (github.event.action == 'closed' && github.event.pull_request.merged == true)
+      github.event.pull_request.merged == true
     runs-on: "ubuntu-22.04"
     timeout-minutes: 10
 
