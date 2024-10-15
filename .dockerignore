@@ -9,6 +9,7 @@ design
 **/.gitattributes
 
 **/.github
+**/.changeset
 **/.devcontainer
 **/.env
 
