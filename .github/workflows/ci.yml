@@ -15,15 +15,15 @@ permissions: {} # disable permissions
 
 jobs:
   build:
+    if: |
+      github.event_name == "push" &&
+      !contains(github.ref, "changeset-release") &&
+      !(
+        contains(github.event.head_commit.message, "Merge pull request ") &&
+        contains(github.event.head_commit.message, "changeset-release")
+      )
     runs-on: "ubuntu-22.04"
     timeout-minutes: 10
-    if: |
-      github.event_name == 'push' &&
-      github.ref_name != 'changeset-release/*' &&
-      !(
-        contains(github.event.head_commit.message, 'Merge pull request ') &&
-        contains(github.event.head_commit.message, 'changeset-release')
-      )
 
     permissions:
       contents: read

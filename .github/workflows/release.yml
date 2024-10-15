@@ -6,13 +6,13 @@ on:
     tags: ["v*.*.*"]
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: "${{ github.workflow }}-${{ github.ref }}"
 
 permissions: {} # disable permissions
 
 jobs:
   release:
-    if: github.repository == 'sjlex/vscode-theme-my-darcula'
+    if: github.repository == "sjlex/vscode-theme-my-darcula"
     runs-on: "ubuntu-22.04"
     timeout-minutes: 10
 

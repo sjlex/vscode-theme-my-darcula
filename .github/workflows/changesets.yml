@@ -7,13 +7,13 @@ on:
       - main
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: "${{ github.workflow }}-${{ github.ref }}"
 
 permissions: {} # disable permissions
 
 jobs:
   changesets:
-    if: github.repository == 'sjlex/vscode-theme-my-darcula'
+    if: github.repository == "sjlex/vscode-theme-my-darcula"
     runs-on: "ubuntu-22.04"
     timeout-minutes: 10
 
@@ -35,7 +35,7 @@ jobs:
           node-version: "22.9.0"
 
       - name: "Install Dependencies"
-        run: corepack enable && yarn install --immutable
+        run: "corepack enable && yarn install --immutable"
 
       - name: "Create Release Pull Request"
         uses: changesets/action@c8bada60c408975afd1a20b3db81d6eee6789308 # v1.4.9
