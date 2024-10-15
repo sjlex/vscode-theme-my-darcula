@@ -12,6 +12,7 @@ permissions: {} # disable permissions
 
 jobs:
   changesets:
+    if: github.repository == 'sjlex/vscode-theme-my-darcula'
     runs-on: "ubuntu-22.04"
     timeout-minutes: 10
 
@@ -27,20 +28,22 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: "Setup Node.js environment"
+        uses: actions/setup-node@0a44ba7841725637a19e28fa30b79a866c81b0a6 # v4.0.4
         with:
-          node-version: 22
+          node-version: "22.9.0"
+          cache: "yarn"
 
-      - name: Install Dependencies
-        run: corepack enable && yarn install --immutable
+      - name: "Install Changesets"
+        run: |
+          yarn global add @changesets/cli
 
       - name: "Create Release Pull Request"
-        uses: changesets/action@v1
+        uses: changesets/action@c8bada60c408975afd1a20b3db81d6eee6789308 # v1.4.9
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          createGithubReleases: false
-          commit: "chore(repo): Version packages"
-          version: yarn exec changeset version
-          publish: yarn exec changeset tag
+          createGithubReleases: true
+          commit: "chore(changesets): 📦 Version packages"
+          version: "yarn exec changeset version"
+          publish: "yarn exec changeset tag"
