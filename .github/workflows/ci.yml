@@ -17,7 +17,7 @@ jobs:
   build:
     if: |
       github.event_name == 'push' &&
-      !contains(github.ref, 'changeset-release') &&
+      !contains(github.event.ref, 'changeset-release') &&
       !(
         contains(github.event.head_commit.message, 'Merge pull request ') &&
         contains(github.event.head_commit.message, 'changeset-release')
