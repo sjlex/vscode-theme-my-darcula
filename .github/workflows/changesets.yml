@@ -44,5 +44,5 @@ jobs:
         with:
           createGithubReleases: true
           commit: "chore(changesets): 📦 Version packages"
-          version: "yarn exec changeset version"
-          publish: "yarn exec changeset tag"
+          version: "npm exec changeset version"
+          publish: "npm exec changeset tag"
