@@ -8,8 +8,8 @@ on:
     tags-ignore:
       - 'v*.*.*'
   pull_request:
-    branches:
-      - '*'
+    branches-ignore:
+      - 'changeset-release/*'
 
 permissions: {} # disable permissions
 
@@ -18,7 +18,7 @@ jobs:
     runs-on: 'ubuntu-22.04'
     timeout-minutes: 10
     if: |
-      !contains(github.ref, 'changeset-release') &&
+      github.event_name == 'push' &&
       !(
         contains(github.event.head_commit.message, 'Merge pull request ') &&
         contains(github.event.head_commit.message, 'changeset-release')
