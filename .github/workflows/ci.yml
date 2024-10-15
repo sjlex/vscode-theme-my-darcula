@@ -18,7 +18,7 @@ jobs:
     runs-on: 'ubuntu-22.04'
     timeout-minutes: 10
     if: |
-      !contains(github.ref, 'changeset-release') &&
+      !contains(github.ref, 'changeset-release/main') &&
       !(
         contains(github.event.head_commit.message, 'Merge pull request ') &&
         contains(github.event.head_commit.message, 'changeset-release')
