@@ -1,5 +1,15 @@
 # vscode-theme-my-darcula
 
+## 1.5.32
+
+### Patch Changes
+
+- [#65](https://github.com/sjlex/vscode-theme-my-darcula/pull/65) [`2a04247`](https://github.com/sjlex/vscode-theme-my-darcula/commit/2a042478dfdc8ca03b765ffe011f779874959c41) Thanks [@sjlex](https://github.com/sjlex)! - - Many fixes
+
+  - Added changesets task for Taskfile
+
+- [#65](https://github.com/sjlex/vscode-theme-my-darcula/pull/65) [`2a04247`](https://github.com/sjlex/vscode-theme-my-darcula/commit/2a042478dfdc8ca03b765ffe011f779874959c41) Thanks [@sjlex](https://github.com/sjlex)! - Fix Artifact version
+
 ## 1.5.31
 
 ### Patch Changes
