@@ -35,6 +35,7 @@ jobs:
 
       - name: "Install Changesets"
         run: |
+          corepack enable &&
           yarn global add @changesets/cli
 
       - name: "Create Release Pull Request"
