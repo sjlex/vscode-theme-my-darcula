@@ -35,7 +35,8 @@ jobs:
 
       - name: "Install Changesets globally"
         run: |
-          npm install -g @changesets/cli@$(node -pe "require('./package').devDependencies['@changesets/cli']")
+          npm install -g @changesets/cli@$(node -pe "require('./package').devDependencies['@changesets/cli']") &&
+          npm install -g @changesets/changelog-github@$(node -pe "require('./package').devDependencies['@changesets/changelog-github']")
 
       - name: "Create Release Pull Request"
         uses: changesets/action@c8bada60c408975afd1a20b3db81d6eee6789308 # v1.4.9
