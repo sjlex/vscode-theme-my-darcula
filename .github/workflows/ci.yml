@@ -19,12 +19,11 @@ jobs:
     timeout-minutes: 10
     if: |
       github.event_name == 'push' &&
+      !contains(github.event.head_commit.message, 'chore(changesets):') &&
       !(
         contains(github.event.head_commit.message, 'Merge pull request ') &&
         contains(github.event.head_commit.message, 'changeset-release')
       )
-
-# 1
 
     permissions:
       contents: read
