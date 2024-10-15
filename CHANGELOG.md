@@ -4,7 +4,9 @@
 
 ### Patch Changes
 
-- [#65](https://github.com/sjlex/vscode-theme-my-darcula/pull/65) [`2a04247`](https://github.com/sjlex/vscode-theme-my-darcula/commit/2a042478dfdc8ca03b765ffe011f779874959c41) Thanks [@sjlex](https://github.com/sjlex)! - - Many fixes
+- [#65](https://github.com/sjlex/vscode-theme-my-darcula/pull/65) [`2a04247`](https://github.com/sjlex/vscode-theme-my-darcula/commit/2a042478dfdc8ca03b765ffe011f779874959c41) Thanks [@sjlex](https://github.com/sjlex)! - Refactoring
+
+  - Many fixes
 
   - Added changesets task for Taskfile
 
