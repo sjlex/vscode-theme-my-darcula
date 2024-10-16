@@ -3,8 +3,8 @@ name: 'CI'
 on:
   workflow_dispatch:
   push:
-    branches-ignore:
-      - 'changeset-release/*'
+    branches:
+      - 'main'
     tags-ignore:
       - 'v*.*.*'
   pull_request:
