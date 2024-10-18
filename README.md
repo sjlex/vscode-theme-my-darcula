@@ -21,7 +21,7 @@
 
 ## Table of contents
 
-- [Darcula Void](#darcula-void)
+- [Darcula Void](#)
   - [Table of contents](#table-of-contents)
   - [Getting started](#getting-started)
     - [Installation](#installation)
