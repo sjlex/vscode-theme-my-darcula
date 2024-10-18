@@ -23,13 +23,12 @@
 
 ## Table of contents
 
-- [Darcula Void](##)
+- [Darcula Void](#)
   - [Table of contents](#table-of-contents)
   - [Getting started](#getting-started)
     - [Installation](#installation)
-  - [Activate theme](#activate-theme)
+    - [Activate theme](#activate-theme)
   - [Recommended settings](#recommended-settings)
-
 
 ## Getting started
 
