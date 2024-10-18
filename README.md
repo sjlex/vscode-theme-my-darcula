@@ -17,8 +17,6 @@
     <a href=""><img src="https://img.shields.io/visual-studio-marketplace/r/akamud.vscode-theme-onedark" alt="Preview in vscode.dev"></a>&nbsp;
 </p>
 
-<br>
-
 ![GitHub VS Code theme](/assets/3.png)
 
 ## Table of contents
