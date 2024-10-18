@@ -3,7 +3,7 @@
     <img src="./assets/icon.png" alt="logo" width="150">
   <br>
   Darcula Void
-  <br>
+  <br><br>
 </h1>
 
 <div align="center">
