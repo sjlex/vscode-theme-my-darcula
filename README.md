@@ -59,7 +59,7 @@ Open **Command Palette**:
 
 Type `theme`, choose `Preferences: Color Theme`, and select `Darcula Void` from the list.
 
-<h3 id="recommended-settings">⚙️ Recommended settings</h3>
+<h2 id="recommended-settings">⚙️ Recommended settings</h3>
 
 #### Font settings
 
