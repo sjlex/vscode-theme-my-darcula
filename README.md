@@ -7,7 +7,7 @@
 </h1>
 
 <div align="center">
-<p>Theme for Visual Studio Code,based on&nbsp;the Darcula theme from JetBrains IDEs, with a&nbsp;pure black background.</p>
+<p>Theme for Visual Studio Code, based on&nbsp;the Darcula theme <br> from JetBrains IDEs, with a&nbsp;pure black background.</p>
 </div>
 
 <p align="center">
