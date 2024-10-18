@@ -1,6 +1,6 @@
 <h3 align="center">
   <br>
-    <img src="/assets/icon.png" alt="logo" width="150">
+    <img src="./assets/icon.png" alt="logo" width="150">
   <br>
   Darcula Void
   <br>
