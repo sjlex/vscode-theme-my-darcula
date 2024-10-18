@@ -29,6 +29,7 @@
   - [Recommended settings](#recommended-settings)
     - [Font settings](#font-settings)
     - [Icon Themes](#icon-themes)
+  - [License](#license)
 
 ## Getting started
 
