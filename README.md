@@ -11,7 +11,7 @@
 </div>
 
 <p align="center">
-  <a href=""><img src="https://img.shields.io/badge/preview%20in-vscode.dev-brightgreen" alt="Preview in vscode.dev"></a>&nbsp;
+  <a href="https://vscode.dev/theme/sjlex.vscode-theme-darcula-void"><img src="https://img.shields.io/badge/preview%20in-vscode.dev-black" alt="Preview in vscode.dev"></a>&nbsp;
   <a href=""><img src="https://img.shields.io/visual-studio-marketplace/v/akamud.vscode-theme-onedark" alt="Visual Studio Marketplace Version (including pre-releases)"></a>&nbsp;
   <a href=""><img src="https://img.shields.io/visual-studio-marketplace/d/akamud.vscode-theme-onedark" alt="Preview in vscode.dev"></a>&nbsp;
   <a href=""><img src="https://img.shields.io/visual-studio-marketplace/r/akamud.vscode-theme-onedark" alt="Preview in vscode.dev"></a>&nbsp;
