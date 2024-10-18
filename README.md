@@ -32,27 +32,29 @@
 
 ### Installation
 
-You can install this theme through the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme). <a href="https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme#review-details"></a>
+You can install this theme through the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=sjlex.vscode-theme-darcula-void).
 
-Launch *Quick Open*:
+***
 
-  - Windows `Ctrl + P`
-  - macOS `⌘ + P`
-  - Linux `Ctrl + P`
+Launch **Quick Open**:
+
+  - Windows: `Ctrl + P`
+  - macOS: `⌘ + P`
+  - Linux: `Ctrl + P`
 
 Paste the following command and press `Enter`:
 
 ```shell
-ext install equinusocio.vsc-material-theme
+ext install sjlex.vscode-theme-darcula-void
 ```
 
 ## Activate theme
 
-Launch *Quick Open*:
+Launch **Quick Open**:
 
-  - Windows `Ctrl + Shift + P`
-  - macOS `⌘ + Shift + P`
-  - Linux `Ctrl + Shift + P`
+  - Windows: `Ctrl + Shift + P`
+  - macOS: `⌘ + Shift + P`
+  - Linux: `Ctrl + Shift + P`
 
 Type `theme`, choose `Preferences: Color Theme`, and select one of the Material Theme variants from the list. After activation, the theme will set the correct icon theme based on your active theme variant.
 
