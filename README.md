@@ -27,10 +27,12 @@
     - [Installation](#installation)
     - [Activate theme](#activate-theme)
   - [Recommended settings](#recommended-settings)
+    - [Font settings](#font-settings)
+    - [Icon Themes](#icon-themes)
 
 ## Getting started
 
-### Installation
+### 📦 Installation
 
 You can install this theme through the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=sjlex.vscode-theme-darcula-void).
 
@@ -46,7 +48,7 @@ Paste the following command and press `Enter`:
 ext install sjlex.vscode-theme-darcula-void
 ```
 
-## Activate theme
+### ☑️ Activate theme
 
 Open **Command Palette**:
 
@@ -56,7 +58,9 @@ Open **Command Palette**:
 
 Type `theme`, choose `Preferences: Color Theme`, and select `Darcula Void` from the list.
 
-## Recommended settings
+## ⚙️ Recommended settings
+
+### Font settings
 
 `settings.json`:
 
@@ -68,6 +72,8 @@ Type `theme`, choose `Preferences: Color Theme`, and select `Darcula Void` from 
   "terminal.integrated.fontSize": 11
 }
 ```
+
+### Icon Themes
 
 You can install one of the Icon Themes below:
 
