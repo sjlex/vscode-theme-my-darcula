@@ -34,7 +34,7 @@
 
 You can install this theme through the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=sjlex.vscode-theme-darcula-void).
 
-<hr/>
+<br>
 
 Launch **Quick Open**:
 
