@@ -4,4 +4,4 @@
 
 My personal theme for Visual Studio Code, based on the Darcula theme from JetBrains IDEs.
 
-![GitHub VS Code theme](https://i.postimg.cc/ZqD7N3Hr/3.png)
+![GitHub VS Code theme](https://i.postimg.cc/QM5mFPBr/3.png)
