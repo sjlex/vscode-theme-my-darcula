@@ -58,6 +58,22 @@ Type `theme`, choose `Preferences: Color Theme`, and select `Darcula Void` from 
 
 ## Recommended settings
 
+```json
+{
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontSize": 12,
+  "editor.lineHeight": 18,
+  "terminal.integrated.fontSize": 11
+}
+```
+
+You can install one of the Icon Themes below:
+
+- [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
+
+- [JetBrains Icon Theme](https://marketplace.visualstudio.com/items?itemName=chadalen.vscode-jetbrains-icon-theme)
+
+
 ## License
 
 [MIT](LICENSE)
