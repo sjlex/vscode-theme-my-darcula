@@ -19,8 +19,6 @@
 
 ![GitHub VS Code theme](/assets/3.png)
 
-![GitHub VS Code theme](/assets/3.png)
-
 ## Table of contents
 
 - [Darcula Void](#darcula-void)
