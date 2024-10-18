@@ -34,8 +34,6 @@
 
 You can install this theme through the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=sjlex.vscode-theme-darcula-void).
 
-<br>
-
 Launch **Quick Open**:
 
   - Windows: `Ctrl + P`
@@ -56,7 +54,7 @@ Launch **Quick Open**:
   - macOS: `⌘ + Shift + P`
   - Linux: `Ctrl + Shift + P`
 
-Type `theme`, choose `Preferences: Color Theme`, and select one of the Material Theme variants from the list. After activation, the theme will set the correct icon theme based on your active theme variant.
+Type `theme`, choose `Preferences: Color Theme`, and select `Darcula Void` from the list.
 
 ## Recommended settings
 
