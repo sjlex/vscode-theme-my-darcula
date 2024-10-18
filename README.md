@@ -24,9 +24,9 @@
 - [Darcula Void](#)
   - [Table of contents](#table-of-contents)
   - [Getting started](#getting-started)
-    - [Installation](#installation)
-    - [Activate theme](#activate-theme)
-  - [Recommended settings](#recommended-settings)
+    - [Installation](#📦-installation)
+    - [Activate theme](#☑️-activate-theme)
+  - [Recommended settings](#⚙️-recommended-settings)
     - [Font settings](#font-settings)
     - [Icon Themes](#icon-themes)
 
