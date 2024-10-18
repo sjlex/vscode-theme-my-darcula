@@ -1,4 +1,4 @@
-<h3 align="center">
+<h3 id="darcula-void" align="center">
   <br>
     <img src="./assets/icon.png" alt="logo" width="150">
   <br>
@@ -21,7 +21,7 @@
 
 ## Table of contents
 
-- [Darcula Void](#)
+- [Darcula Void](#darcula-void)
   - [Table of contents](#table-of-contents)
   - [Getting started](#getting-started)
     - [Installation](#installation)
