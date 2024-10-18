@@ -7,14 +7,14 @@
 </h1>
 
 <div align="center">
-<p>Theme for Visual Studio Code, based on&nbsp;the Darcula theme <br> from JetBrains IDEs, with a&nbsp;pure black background.</p>
+  <p>Theme for Visual Studio Code, based on&nbsp;the Darcula theme <br> from JetBrains IDEs, with a&nbsp;pure black background.</p>
 </div>
 
 <p align="center">
-	<a href=""><img src="https://img.shields.io/badge/preview%20in-vscode.dev-brightgreen" alt="Preview in vscode.dev"></a>&nbsp;
-    <a href=""><img src="https://img.shields.io/visual-studio-marketplace/v/akamud.vscode-theme-onedark" alt="Visual Studio Marketplace Version (including pre-releases)"></a>&nbsp;
-    <a href=""><img src="https://img.shields.io/visual-studio-marketplace/d/akamud.vscode-theme-onedark" alt="Preview in vscode.dev"></a>&nbsp;
-    <a href=""><img src="https://img.shields.io/visual-studio-marketplace/r/akamud.vscode-theme-onedark" alt="Preview in vscode.dev"></a>&nbsp;
+  <a href=""><img src="https://img.shields.io/badge/preview%20in-vscode.dev-brightgreen" alt="Preview in vscode.dev"></a>&nbsp;
+  <a href=""><img src="https://img.shields.io/visual-studio-marketplace/v/akamud.vscode-theme-onedark" alt="Visual Studio Marketplace Version (including pre-releases)"></a>&nbsp;
+  <a href=""><img src="https://img.shields.io/visual-studio-marketplace/d/akamud.vscode-theme-onedark" alt="Preview in vscode.dev"></a>&nbsp;
+  <a href=""><img src="https://img.shields.io/visual-studio-marketplace/r/akamud.vscode-theme-onedark" alt="Preview in vscode.dev"></a>&nbsp;
 </p>
 
 ![GitHub VS Code theme](/assets/3.png)
@@ -39,9 +39,9 @@ You can install this theme through the [Visual Studio Code Marketplace](https://
 
 Launch **Quick Open**:
 
-  - Windows: `Ctrl + P`
-  - macOS: `⌘ + P`
-  - Linux: `Ctrl + P`
+- Windows: `Ctrl + P`
+- macOS: `⌘ + P`
+- Linux: `Ctrl + P`
 
 Paste the following command and press `Enter`:
 
@@ -53,9 +53,9 @@ ext install sjlex.vscode-theme-darcula-void
 
 Open **Command Palette**:
 
-  - Windows: `Ctrl + Shift + P`
-  - macOS: `⌘ + Shift + P`
-  - Linux: `Ctrl + Shift + P`
+- Windows: `Ctrl + Shift + P`
+- macOS: `⌘ + Shift + P`
+- Linux: `Ctrl + Shift + P`
 
 Type `theme`, choose `Preferences: Color Theme`, and select `Darcula Void` from the list.
 
@@ -81,7 +81,6 @@ You can install one of the Icon Themes below:
 - [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
 
 - [JetBrains Icon Theme](https://marketplace.visualstudio.com/items?itemName=chadalen.vscode-jetbrains-icon-theme)
-
 
 ## License
 
