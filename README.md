@@ -61,7 +61,7 @@ Type `theme`, choose `Preferences: Color Theme`, and select `Darcula Void` from 
 
 <h2 id="recommended-settings">⚙️ Recommended settings</h3>
 
-#### Font settings
+### Font settings
 
 `settings.json`:
 
@@ -74,7 +74,7 @@ Type `theme`, choose `Preferences: Color Theme`, and select `Darcula Void` from 
 }
 ```
 
-#### Icon Themes
+### Icon Themes
 
 You can install one of the Icon Themes below:
 
