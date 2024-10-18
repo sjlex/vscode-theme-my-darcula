@@ -48,7 +48,7 @@ Paste the following command and press `Enter`:
 ext install sjlex.vscode-theme-darcula-void
 ```
 
-### ☑️ Activate theme [activate-theme]
+<h3 id="activate-theme">☑️ Activate theme</h3>
 
 Open **Command Palette**:
 
@@ -58,7 +58,7 @@ Open **Command Palette**:
 
 Type `theme`, choose `Preferences: Color Theme`, and select `Darcula Void` from the list.
 
-## ⚙️ Recommended settings [recommended-settings]
+<h3 id="recommended-settings">⚙️ Recommended settings</h3>
 
 ### Font settings
 
